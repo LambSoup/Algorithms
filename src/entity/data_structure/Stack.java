@@ -7,7 +7,8 @@ public class Stack {
 
 	public void push(int value) {
 		ItemStack new_head = new ItemStack(null, head, value);
-		head.setNext(new_head);
+		if (head != null)
+			head.setNext(new_head);
 		head = new_head;
 		size++;
 	}
