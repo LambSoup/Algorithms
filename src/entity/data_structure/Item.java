@@ -1,33 +1,33 @@
 package entity.data_structure;
 
-class ItemStack {
+class Item {
 
-	private ItemStack next;
-	private ItemStack previous;
+	private Item next;
+	private Item previous;
 	private int value;
 
-	public ItemStack(ItemStack next, ItemStack previous, int value	) {
+	public Item(Item next, Item previous, int value	) {
 		this.next = next;
 		this.previous = previous;
 		this.value = value;
 	}
 
-	public ItemStack() {
+	public Item() {
 	}
 
-	public ItemStack getNext() {
+	public Item getNext() {
 		return next;
 	}
 
-	public void setNext(ItemStack next) {
+	public void setNext(Item next) {
 		this.next = next;
 	}
 
-	public ItemStack getPrevious() {
+	public Item getPrevious() {
 		return previous;
 	}
 
-	public void setPrevious(ItemStack previous) {
+	public void setPrevious(Item previous) {
 		this.previous = previous;
 	}
 

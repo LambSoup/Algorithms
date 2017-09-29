@@ -2,11 +2,11 @@ package entity.data_structure;
 
 public class Stack {
 
-	private ItemStack head;
+	private Item head;
 	private int size;
 
 	public void push(int value) {
-		ItemStack new_head = new ItemStack(null, head, value);
+		Item new_head = new Item(null, head, value);
 		if (head != null)
 			head.setNext(new_head);
 		head = new_head;
@@ -27,9 +27,9 @@ public class Stack {
 		return value;
 	}
 
-	private ItemStack remove(ItemStack item) {
-		ItemStack next = item.getNext();
-		ItemStack previous = item.getPrevious();
+	private Item remove(Item item) {
+		Item next = item.getNext();
+		Item previous = item.getPrevious();
 		if (next != null) {
 			next.setPrevious(previous);
 		}
