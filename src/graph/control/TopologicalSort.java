@@ -16,9 +16,8 @@ public class TopologicalSort {
 			if (A[u] == null)
 				continue;
 			for (int v : A[u]) {
-				int adjacents = in_degree[v];
-				adjacents--;
-				if (adjacents == 0)
+				in_degree[v]--;
+				if (in_degree[v] == 0)
 					next.push(v);
 			}
 		}
